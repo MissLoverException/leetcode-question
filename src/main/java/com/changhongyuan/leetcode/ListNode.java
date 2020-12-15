@@ -1,4 +1,4 @@
-package com.shuzijun.leetcode;
+package com.changhongyuan.leetcode;
 
 /**
 
@@ -9,6 +9,11 @@ public class ListNode {
 
     public ListNode(int x) {
         val = x;
+    }
+
+    public ListNode(int x, ListNode next) {
+        val = x;
+        this.next = next;
     }
 
     @Override

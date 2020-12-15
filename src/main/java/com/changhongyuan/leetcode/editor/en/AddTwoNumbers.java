@@ -11,9 +11,9 @@
 // 
 //
 
-package com.shuzijun.leetcode.editor.en;
+package com.changhongyuan.leetcode.editor.en;
 
-import com.shuzijun.leetcode.ListNode;
+import com.changhongyuan.leetcode.ListNode;
 
 public class AddTwoNumbers {
     public static void main(String[] args) {
