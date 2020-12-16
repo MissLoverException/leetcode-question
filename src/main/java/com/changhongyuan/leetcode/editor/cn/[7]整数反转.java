@@ -30,6 +30,14 @@ class ReverseInteger{
     class Solution {
         public int reverse(int x) {
             int result = 0;
+            while (x / 10 != 0 || x % 10 != 0) {
+                int resultBe = result;
+                result = result * 10 + x % 10;
+                if (result / 10 != resultBe) {
+                    result = 0;
+                }
+                x = x / 10;
+            }
             return result;
         }
     }
@@ -37,6 +45,7 @@ class ReverseInteger{
 
     public static void main(String[] args) {
         Solution solution = new ReverseInteger().new Solution();
-        System.out.println();
+        int result = solution.reverse(1534236469);
+        System.out.println(result);
     }
 }

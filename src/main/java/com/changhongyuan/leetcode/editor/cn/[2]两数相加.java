@@ -36,6 +36,7 @@ class Solution {
     }
 
     public ListNode doCal(ListNode l1, ListNode l2, int in) {
+        //判断递归终止，包括进位也要判断
         if (null == l1 && null == l2 && in == 0) {
             return null;
         }
@@ -43,6 +44,7 @@ class Solution {
         int n2 = null != l2 ? l2.val : 0;
         int sum = n1 + n2 + in;
         ListNode result = new ListNode(sum % 10);
+        //判断递归，将next做一长串
         result.next = doCal(null != l1 ? l1.next : null, null != l2 ? l2.next : null, sum / 10);
         return result;
     }
