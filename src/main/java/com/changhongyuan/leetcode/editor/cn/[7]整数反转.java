@@ -45,7 +45,7 @@ class ReverseInteger{
 
     public static void main(String[] args) {
         Solution solution = new ReverseInteger().new Solution();
-        int result = solution.reverse(1534236469);
+        int result = solution.reverse(394892);
         System.out.println(result);
     }
 }
