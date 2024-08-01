@@ -1,0 +1,33 @@
+### 解题思路
+
+执行用时：38 ms, 在所有 Java 提交中击败了43.59%的用户
+内存消耗：41.9 MB, 在所有 Java 提交中击败了12.45%的用户
+
+### 代码
+
+* java
+
+```java
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int result1 = -1;
+        int result2 = -1;
+        for (int i = 0; i < nums.length; i++) {
+            int temp = target - nums[i];
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[j] == temp) {
+                    result2 = j;
+                    break;
+                }
+            }
+            if (result2 != -1) {
+                result1 = i;
+                break;
+            }
+        }
+        int[] result = {result1, result2};
+        return result;
+    }
+}
+```
+
